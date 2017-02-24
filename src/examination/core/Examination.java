@@ -6,7 +6,7 @@ public class Examination {
 	private String type;
 	private Patient patient;
 	private ArrayList<Measurement> measurements;
-	
+
 	public Examination (String type, Patient patient) {
 		this.type = type;
 		this.patient = patient;
@@ -16,16 +16,16 @@ public class Examination {
 	public Examination () {
 
 	}
-	
+
 	public boolean insert(Measurement m) {
 		return measurements.add(m);
 	}
-	
+
 	public Measurement getIndex(int index) {
 		return measurements.get(index);
 	}
 
-	
+
 	public String getType () {
 		return type;
 	}

@@ -6,7 +6,7 @@ public class Patient {
 	private String lname;
 	private String station;
 	private String insurance;
-	
+
 	public Patient (String pid, String fname, String lname, String station, String insurance) {
 		this.pid = pid;
 		this.fname = fname;
@@ -19,7 +19,7 @@ public class Patient {
 
 	}
 
-	
+
 	public String getPid () {
 		return pid;
 	}

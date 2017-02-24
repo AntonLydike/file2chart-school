@@ -9,7 +9,7 @@ public class ReaderResult {
 	private String filename;
 	private String pid;
 	private String error = null;
-	
+
 	public ReaderResult (int linesSkipped, Examination result, int linesRead, String filename, String pid) {
 		this.linesSkipped = linesSkipped;
 		this.result = result;
@@ -17,20 +17,20 @@ public class ReaderResult {
 		this.filename = filename;
 		this.pid = pid;
 	}
-	
+
 	public ReaderResult (String error) {
 		this.error = error;
 	}
-	
+
 	public boolean success() {
 		return error == null;
 	}
-	
+
 	public String getError() {
 		return error;
 	}
 
-	
+
 	public int getLinesSkipped() {
 		return linesSkipped;
 	}
@@ -46,7 +46,7 @@ public class ReaderResult {
 	public String getFilename () {
 		return filename;
 	}
-	
+
 	public String getPID() {
 		return pid;
 	}
