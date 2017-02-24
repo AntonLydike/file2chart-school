@@ -4,6 +4,8 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import examination.core.*;
+import examination.reader.*;
 
 
 public class Main extends Application {
@@ -15,6 +17,17 @@ public class Main extends Application {
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
+			
+			ReaderResult res = ExamReader.read("Langzeitblutdruck_PID34567.txt");
+			
+			if (res.success()) {
+				System.out.println(res.getLinesRead());
+				System.out.println(res.getLinesSkipped());
+				System.out.println(res.getResult().getPatient().getFname());
+			} else {
+
+				System.out.println(res.getError());
+			}
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

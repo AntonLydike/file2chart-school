@@ -1,4 +1,4 @@
-package application;
+package examination.core;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -23,20 +23,17 @@ public class Measurement {
 		this.pulse = pulse;
 	}
 	
-	public Measurement (String date, String time, int systole, int diastole, int pulse) {
+	public Measurement (String date, String time, int systole, int diastole, int pulse) throws ParseException {
 		long unixTime = -1;
 		
 		String fullDate = date + " " + time;
 		
 		DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy hh:mm");
 		Date dateObj;
-		try {
-			dateObj = dateFormat.parse(fullDate);
-			unixTime = (long)dateObj.getTime()/1000;
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
+		dateObj = dateFormat.parse(fullDate);
+		unixTime = (long)dateObj.getTime()/1000;
+		
 		
 		
 		this.date = date;
@@ -46,13 +43,21 @@ public class Measurement {
 		this.diastole = diastole;
 		this.pulse = pulse;
 	}
-	
-	
 
 	public Measurement () {
 
 	}
 
+	
+	public String getDescription() {
+		return "date: " + getDate()
+				+ "\nunix: " + getUnixTime()
+				+ "\ntime: " + getTime()
+				+ "\nsystole: " + getSystole()
+				+ "\ndiastole: " + getDiastole()
+				+ "\npulse: " + getPulse()
+				+ "\n\n";
+	}
 	
 	public String getDate () {
 		return date;

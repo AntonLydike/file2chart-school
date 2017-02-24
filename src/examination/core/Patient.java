@@ -1,4 +1,4 @@
-package application;
+package examination.core;
 
 public class Patient {
 	private String pid;

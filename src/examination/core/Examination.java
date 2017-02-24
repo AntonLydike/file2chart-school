@@ -1,4 +1,4 @@
-package application;
+package examination.core;
 
 import java.util.ArrayList;
 
