@@ -23,7 +23,7 @@ public class Main extends Application {
 		
         stage.setMinWidth(800);
         stage.setMinHeight(600);
-        stage.setTitle("File2Graph");
+        stage.setTitle("File2Graph - a school project");
         stage.setScene(scene);
         stage.show();
         
