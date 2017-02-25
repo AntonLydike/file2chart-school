@@ -59,7 +59,9 @@ Upon submitting a file, the View changes to a large graph:
 
 On the top right is a hamburger icon which extends the side-nav which contains all the other details.
 
-The "X" on the top left get's you back to the drop page.
+The "X" on the top left get's you back to the drop page. Errors are displayed at the bottom and range from "Error: Wrong Filetype" to these warnings. 
+
+The warnings are generated because I purpousfully "corrupted" [one of the two files](Langzeitblutdruck_PID34567-DISTORTED.txt).
 
 ## Maybe-features / development possibilities
 
