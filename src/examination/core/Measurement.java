@@ -28,7 +28,7 @@ public class Measurement {
 
 		String fullDate = date + " " + time;
 
-		DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy hh:mm");
+		DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy HH:mm");
 		Date dateObj;
 
 		dateObj = dateFormat.parse(fullDate);

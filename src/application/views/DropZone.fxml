@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="Drop" prefHeight="438.0" prefWidth="484.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.DropController">
+   <center>
+      <HBox alignment="CENTER" onMouseClicked="#fileDialog" prefHeight="165.0" prefWidth="42.0" styleClass="drop-zone" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="438.0" prefWidth="326.0">
+               <children>
+                  <Label styleClass="light-title" text="DROP FILE HERE" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/file_add.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets left="24.0" right="24.0" />
+         </BorderPane.margin>
+      </HBox>
+   </center>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</BorderPane>

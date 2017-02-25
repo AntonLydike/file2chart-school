@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="564.0" prefWidth="625.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.FileViewController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="graph-content" BorderPane.alignment="CENTER">
+         <children>
+            <LineChart fx:id="datChart" layoutX="14.0" layoutY="103.0" maxWidth="1.7976931348623157E308" prefHeight="359.0" prefWidth="503.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="50.0">
+              <xAxis>
+                <NumberAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <ImageView fitWidth="21.0" layoutX="14.0" layoutY="2.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/close.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <HBox fx:id="sidenav" layoutX="543.0" layoutY="2.0" maxHeight="1.7976931348623157E308" prefHeight="564.0" prefWidth="380.0" styleClass="side-nav" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <ImageView fitWidth="30.0" onMouseClicked="#burgerClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hamburger.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <VBox maxHeight="1.7976931348623157E308" styleClass="nav-body" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ScrollPane fitToHeight="true" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                           <content>
+                              <VBox fx:id="navContent" maxHeight="1.7976931348623157E308" styleClass="exam-list" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

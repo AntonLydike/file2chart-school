@@ -19,7 +19,15 @@ public class ExamReader {
 		Examination exam = null;
 
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
-			String type = br.readLine().substring(5); // read first line, discard first 5 characters
+			
+			
+			String type = br.readLine();
+			
+			if (!type.startsWith("Art:")) {
+				return new ReaderResult("Read Error: Wrong filetype!");
+			}
+			
+			type = type.substring(5); // read first line, discard first 5 characters
 			String hl7_line = br.readLine().substring(16); // read second line, discard first 16 characters
 			String[] hl7_arr = hl7_line.split("\\|"); // split the HL7 at "|"
 

@@ -1,0 +1,204 @@
+#root {
+	-fx-font-family: "Open Sans";
+	-fx-background-color:#394347;
+	-fx-text-fill: #eee;
+}
+
+.scroll-pane {
+   -fx-background-color: transparent;
+}
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+
+#yield {
+	-fx-padding:24px 0px;
+}
+
+
+
+
+#yield Label.light, 
+#yield Label.title, 
+#yield Label.title2 {
+	-fx-font-family: "Open Sans Light";
+}
+#yield Label.title{
+	-fx-font-size: 24px;
+}
+#yield Label.title2{
+	-fx-font-size: 20px;
+}
+
+#yield Label.italic {
+	-fx-font-style: italic ;
+	-fx-font-family: "Open Sans Italic";
+}
+
+#header Label.light {
+	-fx-font-size: 24px;
+	-fx-font-family: "Open Sans Light";
+}
+
+Label {
+	-fx-padding: 16px 0 4px 0;
+	-fx-font-size: 16px;
+	-fx-text-fill: #eee;
+}
+
+#yield Button {
+	-fx-min-width: 100px;
+	-fx-alignment: center;
+}
+
+Label.error {
+	-fx-padding: 0 0 0 0;
+	-fx-text-fill: #ff8484;
+	-fx-font-family: "Open Sans";
+}
+#yield .no-padding {
+	-fx-padding: 0 0 0 0;
+}
+
+Button.icon { 
+    -fx-background-size: cover;
+    -fx-background-color: transparent;  
+}
+.icon-lock {
+	-fx-background-image:url("/application/images/lock.png");   
+}
+.icon-settings {
+	-fx-background-image:url("/application/images/settings.png");   
+}
+.icon-add {
+	-fx-background-image:url("/application/images/add_person.png");   
+}
+.icon-home {
+	-fx-background-image:url("/application/images/home.png");   
+}
+
+#yield Button, #yield ChoiceBox {
+	-fx-background-color: #2196F3;
+    -fx-effect: 
+    	dropshadow(three-pass-box, rgba(0,0,0,.16), 5, 0, 1, 3), 
+    	dropshadow(three-pass-box, rgba(0,0,0,.12), 10, 0, 1, 7);
+	-fx-border-width: 0px;
+	-fx-font-size:16px;
+	-fx-text-fill: white;
+}
+#yield DatePicker Button {
+	-fx-background-color: transparent;
+    -fx-effect: none;
+	-fx-border-width: 0px;
+	-fx-font-size:16px;
+	-fx-text-fill: white;
+	-fx-min-width: 0px;
+}
+#yield Button.error {
+	-fx-background-color:#F44336 !important;
+}
+#yield Button.fine {
+	-fx-background-color:#4CAF50 !important;
+}
+
+#yield ChoiceBox Label {
+	-fx-padding: 8px;
+	-fx-font-size: 16px;
+	-fx-text-fill:#fff;
+}
+
+
+#yield TextField, #yield PasswordField, #yield DatePicker {
+    -fx-background-color: #a9a9a9 , white , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+    -fx-background-radius: 10 10 0 0;
+    -fx-font-size: 14px;
+}
+
+#yield TextField:focused, #yield PasswordField:focused, #yield DatePicker:focused {
+    -fx-background-color: #a9a9a9 , white , white;
+    -fx-background-insets: 0 -1 -1 -1, 0 0 0 0, 0 -1 3 -1;
+}
+
+
+
+
+
+
+
+
+.exam-list VBox:hover {
+	-fx-background-color: rgba(255,255,255,.2);
+}
+
+.exam-list VBox {
+	-fx-padding: 8px;
+}
+
+.exam-list VBox Label {
+	-fx-padding: 0px 0px 0px 0px;
+}
+
+.drop-zone, #dropzone {
+	-fx-border-color: rgba(0,0,0,0.5);
+	-fx-border-insets: 5;
+	-fx-border-width: 3;
+	-fx-border-style: dashed;
+	-fx-border-radius: 20px;
+	-fx-background-color: #394347;
+}
+
+#yield .light-title {
+
+	-fx-font-size: 24px;
+	-fx-font-family: "Open Sans Light";
+	-fx-text-fill: #ddd;
+}
+
+
+
+.side-nav .nav-body {
+	-fx-padding: 0.0px 0.0px 0.0px 24px;
+	-fx-background-color: #394347aa;
+}
+
+.side-nav Label{
+	-fx-padding: 0;
+}
+
+.side-nav .nav-header {
+	-fx-padding: 16px 0 4px 0;
+   -fx-border-color: #eee;
+   -fx-border-width: 0 0 1 0;
+   -fx-border-style: solid;
+	
+}
+
+.chart-legend {
+   -fx-background-color:  transparent;
+}
+
+.axis-label {
+  -fx-text-fill: #eee;
+}
+
+.chart-plot-background {
+    -fx-background-color: rgba(255,255,255,.2);
+}
+.chart-vertical-grid-lines {
+    -fx-stroke: #aaa;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: #aaa;
+}
+.chart-alternative-row-fill {
+    -fx-fill: rgba(255,255,255,.1);
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
+
+.axis {
+	-fx-tick-label-fill: #aaa;
+}
+
+

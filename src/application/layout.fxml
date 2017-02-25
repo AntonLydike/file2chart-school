@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox id="root" alignment="CENTER" minHeight="400.0" minWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AppController">
+   <children>
+      <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefViewportHeight="350.0" prefViewportWidth="600.0" VBox.vgrow="ALWAYS">
+         <content>
+            	<StackPane id="yield" fx:id="yield" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+	            	<children>
+	            		<fx:include source="/application/views/DropZone.fxml" fx:id="Drop"></fx:include>
+			      		<fx:include source="/application/views/FileView.fxml" fx:id="View"></fx:include>
+			      		
+	            	</children>
+		</StackPane>
+         </content>
+      </ScrollPane>
+      <Label fx:id="err" alignment="BOTTOM_CENTER" contentDisplay="CENTER" styleClass="error" translateY="-20.0" />
+   </children>
+</VBox>

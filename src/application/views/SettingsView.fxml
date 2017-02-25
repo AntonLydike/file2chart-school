@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane minHeight="555.0" minWidth="500.0" prefHeight="555.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.SettingsController">
+   <top>
+      <Label styleClass="title" text="Einstellungen" BorderPane.alignment="CENTER_LEFT" />
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane maxWidth="1.7976931348623157E308" vgap="8.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label styleClass="title2" text="Passwort ändern" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+                  <Label text="Neues Passwort:" GridPane.rowIndex="9" />
+                  <Label text="Bestätigen:" GridPane.rowIndex="10" />
+                  <PasswordField fx:id="pass" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                  <PasswordField fx:id="pass2" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                  <Label styleClass="title2" text="Persönliche Daten" GridPane.columnSpan="2" />
+                  <Label text="Vorname:" GridPane.rowIndex="1" />
+                  <Label text="Nachname:" GridPane.rowIndex="2" />
+                  <Label text="Fachgebiet:" GridPane.rowIndex="3" />
+                  <Label text="Straße:" GridPane.rowIndex="4" />
+                  <Label text="PLZ:" GridPane.rowIndex="5" />
+                  <Label text="Ort:" GridPane.rowIndex="6" />
+                  <TextField fx:id="fname" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="lname" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="gebiet" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="str" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="plz" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="ort" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Button mnemonicParsing="false" onAction="#saveData" text="Speichern" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+                  <Button fx:id="savePass" mnemonicParsing="false" onAction="#savePass" text="Speichern" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="12" />
+                  <Label maxHeight="1.7976931348623157E308" opacity="0.73" styleClass="italic" text="Das Passwort muss länger als 3 Zeichen sein und darf Buchstaben, Zahlen sowie Sonderzeichen enthalten, muss dies aber nicht." wrapText="true" GridPane.columnSpan="2" GridPane.rowIndex="11" GridPane.vgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Italic" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

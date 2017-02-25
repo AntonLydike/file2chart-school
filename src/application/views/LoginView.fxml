@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox id="Login" maxHeight="120.0" maxWidth="300.0" prefHeight="120.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controllers.DropController">
+   <children>
+      <Label text="Arzt ID" BorderPane.alignment="CENTER" />
+      <TextField fx:id="user" promptText="123456">
+      </TextField>
+      <Label text="Passwort" />
+      <PasswordField fx:id="pass" onAction="#login" promptText="Passwort">
+         <VBox.margin>
+            <Insets bottom="16.0" />
+         </VBox.margin></PasswordField>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <Label fx:id="error" alignment="CENTER" maxWidth="1.7976931348623157E308" styleClass="error" text="Falsches Passwort :(" visible="false" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#login" text="Login" textAlignment="CENTER" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="8.0" />
+               </BorderPane.margin></Button>
+         </right>
+      </BorderPane>
+   </children>
+   <padding>
+      <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+   </padding>
+</VBox>
