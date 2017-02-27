@@ -82,12 +82,10 @@ public class ExamReader {
 					System.out.println("Read error: malformed number:");
 					System.out.println(e.getLocalizedMessage() + "\n\n");
 					linesSkipped++;
-					e.printStackTrace();
 				} catch (ParseException e) {
 					System.out.println("Read error: malformed date:");
 					System.out.println(e.getLocalizedMessage() + "\n\n");
 					linesSkipped++;
-					e.printStackTrace();
 				}
 
 
@@ -98,13 +96,11 @@ public class ExamReader {
 		} catch (FileNotFoundException e) {
 			System.out.println("File not foud:");
 			System.out.println(e.getLocalizedMessage() + "\n\n");
-			e.printStackTrace();
 
 			return new ReaderResult("File \"" + filename + "\" not foud");
 		} catch (IOException e) {
 			System.out.println("Input/Output error:");
 			System.out.println(e.getLocalizedMessage() + "\n\n");
-			e.printStackTrace();
 
 			return new ReaderResult("Input/Output error!");
 		}
