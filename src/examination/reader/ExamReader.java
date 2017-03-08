@@ -71,7 +71,7 @@ public class ExamReader {
 							Integer.parseInt(match.group(3)), 
 							Integer.parseInt(match.group(4)), 
 							Integer.parseInt(match.group(5))
-							);
+						);
 
 
 					exam.insert(item);

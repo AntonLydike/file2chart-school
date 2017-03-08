@@ -11,6 +11,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.chart.BarChart;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
@@ -43,6 +44,8 @@ public class FileViewController extends ViewController<AppController> {
 		AppController.registerFileView(this);
 		
 		sidenav.setTranslateX(330f);
+		
+		datChart.setCreateSymbols(false);
 
 		xa = (NumberAxis) datChart.getXAxis();
 		ya = (NumberAxis) datChart.getYAxis();
@@ -74,14 +77,6 @@ public class FileViewController extends ViewController<AppController> {
 			
 		});
 		
-	}
-	
-	
-	@Override
-	public void beforeRender() {		
-		if (ex == null) {
-			return;	
-		}
 	}
 	
 	private VBox genListItem (Measurement m) {
@@ -190,6 +185,10 @@ public class FileViewController extends ViewController<AppController> {
 		
 		navContent.getChildren().add(header);
 		
+
+
+		int offset = 60*5;
+		
 		for (int i = 0; i < list.size(); i++) {
 			Measurement m = list.get(i);
 			
@@ -199,10 +198,16 @@ public class FileViewController extends ViewController<AppController> {
 
 			max = (max > m.getUnixTime())? max : m.getUnixTime();
 			min = (min < m.getUnixTime())? min : m.getUnixTime();
-
-			dia.add(new XYChart.Data<Number, Number>(m.getUnixTime(), m.getDiastole()));
-			sys.add(new XYChart.Data<Number, Number>(m.getUnixTime(), m.getSystole()));
+			
+			dia.add(new XYChart.Data<Number, Number>(m.getUnixTime() + offset, 0));
+			dia.add(new XYChart.Data<Number, Number>(m.getUnixTime() + offset, m.getDiastole()));
+			dia.add(new XYChart.Data<Number, Number>(m.getUnixTime() + offset, 0));
+			sys.add(new XYChart.Data<Number, Number>(m.getUnixTime() - offset, 0));
+			sys.add(new XYChart.Data<Number, Number>(m.getUnixTime() - offset, m.getSystole()));
+			sys.add(new XYChart.Data<Number, Number>(m.getUnixTime() - offset, 0));
+			pul.add(new XYChart.Data<Number, Number>(m.getUnixTime(), 0));
 			pul.add(new XYChart.Data<Number, Number>(m.getUnixTime(), m.getPulse()));
+			pul.add(new XYChart.Data<Number, Number>(m.getUnixTime(), 0));
 		}
 		
 		xa.setLowerBound(min - 900);
@@ -236,6 +241,12 @@ public class FileViewController extends ViewController<AppController> {
 
 	@Override
 	public void beforeRemove() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void beforeRender() {
 		// TODO Auto-generated method stub
 		
 	}

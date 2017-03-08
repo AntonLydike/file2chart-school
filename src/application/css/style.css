@@ -201,4 +201,6 @@ Button.icon {
 	-fx-tick-label-fill: #aaa;
 }
 
-
+.chart-area-symbol {
+	-fx-background-color: null, null;
+}
